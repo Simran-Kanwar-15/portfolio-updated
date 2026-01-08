@@ -1,0 +1,173 @@
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ===== HEADER / NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #000;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.logo span {
+  color: #ff4081;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-left: 25px;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff4081;
+}
+
+/* ===== SECTION TITLES ===== */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+h1 span {
+  color: #ff4081;
+}
+
+.section-intro {
+  color: #ccc;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* ===== CERTIFICATES ===== */
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 80px;
+}
+
+.certificate-box {
+  background-color: #111;
+  border: 2px solid #ff4081;
+  border-radius: 20px;
+  padding: 25px;
+  width: 300px;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.certificate-box:hover {
+  transform: translateY(-5px);
+}
+
+.certificate-box h3 {
+  color: #ff4081;
+  margin-bottom: 10px;
+}
+
+.certificate-box p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.certificate-btn {
+  background-color: #ff4081;
+  color: #000;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.certificate-btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ===== EXPERIENCE ===== */
+.experience-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.experience-box {
+  background-color: #111;
+  border: 2px solid #ff4081;
+  border-radius: 20px;
+  padding: 25px;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.experience-box:hover {
+  transform: translateY(-5px);
+}
+
+.experience-box h3 {
+  color: #ff4081;
+  margin-bottom: 10px;
+}
+
+.experience-box p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #000;
+  padding: 30px 10%;
+  text-align: center;
+  border-top: 1px solid #222;
+  color: #aaa;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .certificates-container,
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

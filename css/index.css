@@ -1,0 +1,162 @@
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #000;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.logo span {
+  color: #ff4081;
+}
+
+.nav-links a {
+  color: #fff;
+  margin-left: 25px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ff4081;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  padding: 80px 10%;
+}
+
+.about-content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 350px;
+  border-radius: 15px;
+  border: 3px solid #ff4081;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h1 {
+  font-size: 2.8rem;
+}
+
+.about-text h1 span {
+  color: #ff4081;
+}
+
+.about-text h3 {
+  color: #ff4081;
+  margin: 10px 0 20px;
+}
+
+.about-text p {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* ===== INFO ===== */
+.about-info ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.about-info li {
+  margin-bottom: 8px;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ff4081;
+}
+
+/* ===== BUTTON SYSTEM (FIXED) ===== */
+.btn-container {
+  margin-top: 25px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 35px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border: 2px solid #ff4081;
+  transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #ff4081;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: #ff4081;
+}
+
+/* Secondary Button (Contact + Resume) */
+.btn-secondary {
+  background-color: transparent;
+  color: #ff4081;
+}
+
+.btn-secondary:hover {
+  background-color: #ff4081;
+  color: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 80%;
+  }
+
+  .btn-container {
+    justify-content: center;
+  }
+}
