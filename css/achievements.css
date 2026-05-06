@@ -41,6 +41,7 @@ body {
   font-weight: 500;
   font-size: 1.05rem;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .nav-links a:hover,
@@ -66,7 +67,11 @@ h1 span {
   margin-bottom: 50px;
 }
 
-/* ===== CERTIFICATES ===== */
+/* ===== CERTIFICATES SECTION ===== */
+.certificates-section {
+  padding: 60px 10%;
+}
+
 .certificates-container {
   display: flex;
   flex-wrap: wrap;
@@ -75,18 +80,26 @@ h1 span {
   margin-bottom: 80px;
 }
 
+/* Card Design */
 .certificate-box {
-  background-color: #111;
+  background: rgba(17, 17, 17, 0.8);
   border: 2px solid #ff4081;
   border-radius: 20px;
   padding: 25px;
   width: 300px;
-  transition: transform 0.3s;
   text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(255, 64, 129, 0.2);
+  
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s ease forwards;
+  transition: all 0.4s ease;
 }
 
 .certificate-box:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 64, 129, 0.5);
 }
 
 .certificate-box h3 {
@@ -100,23 +113,34 @@ h1 span {
   margin-bottom: 15px;
 }
 
+/* Button */
 .certificate-btn {
-  background-color: #ff4081;
+  display: inline-block;
+  background: linear-gradient(45deg, #ff4081, #ff79a8);
   color: #000;
-  padding: 12px 20px;
+  padding: 12px 22px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .certificate-btn:hover {
-  background-color: #fff;
+  background: #fff;
   color: #000;
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* ===== EXPERIENCE ===== */
+/* Animation Delay for Stagger Effect */
+.certificate-box:nth-child(1) { animation-delay: 0.1s; }
+.certificate-box:nth-child(2) { animation-delay: 0.2s; }
+.certificate-box:nth-child(3) { animation-delay: 0.3s; }
+.certificate-box:nth-child(4) { animation-delay: 0.4s; }
+.certificate-box:nth-child(5) { animation-delay: 0.5s; }
+.certificate-box:nth-child(6) { animation-delay: 0.6s; }
+.certificate-box:nth-child(7) { animation-delay: 0.7s; }
+
+/* ===== EXPERIENCE SECTION ===== */
 .experience-container {
   display: flex;
   flex-wrap: wrap;
@@ -125,17 +149,21 @@ h1 span {
   margin-bottom: 80px;
 }
 
+/* Experience Card */
 .experience-box {
-  background-color: #111;
+  background: rgba(17, 17, 17, 0.8);
   border: 2px solid #ff4081;
   border-radius: 20px;
   padding: 25px;
   width: 300px;
-  transition: transform 0.3s;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(255, 64, 129, 0.2);
+  transition: all 0.4s ease;
 }
 
 .experience-box:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 64, 129, 0.5);
 }
 
 .experience-box h3 {
@@ -158,6 +186,14 @@ h1 span {
   color: #aaa;
 }
 
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .certificates-container,
@@ -167,7 +203,14 @@ h1 span {
   }
 
   .nav-links {
+    display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
