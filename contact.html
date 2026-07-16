@@ -4,58 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Simran Kanwar - Contact</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/contact.css" />
 </head>
 <body>
 
-  <!-- ===== HEADER / NAVBAR ===== -->
-  <header class="navbar">
+  <!-- NAVBAR -->
+  <nav class="navbar" data-aos="fade-down">
     <div class="logo">Simran<span>Kanwar</span></div>
-    <nav class="nav-links">
+    <div class="nav-links">
       <a href="index.html">About</a> 
       <a href="skill.html">Skills</a>
       <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
       <a href="achievements.html">Achievements</a>
       <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <!-- ===== CONTACT SECTION ===== -->
+  <!-- CONTACT SECTION -->
   <section class="contact-section">
-    <h1>Contact <span>Me</span></h1>
-    <p class="contact-intro">Have a question or want to collaborate? Reach out via email, phone, or my social profiles below!</p>
+    <h1 data-aos="fade-up">Contact <span class="gradient-text">Me</span></h1>
+    <p class="section-intro" data-aos="fade-up" data-aos-delay="100">
+      Have a question or want to collaborate? Reach out via email, phone, or my social profiles below!
+    </p>
 
     <div class="contact-container">
 
       <!-- Contact Info -->
-      <div class="contact-info">
-        <p><strong>Email:</strong> rathoresimran567@gmail.com</p>
+      <div class="contact-info glass-card" data-aos="fade-right" data-aos-delay="200">
+        <h3>Contact Info</h3>
+        <p><strong>Email:</strong> <a href="mailto:rathoresimran567@gmail.com">rathoresimran567@gmail.com</a></p>
         <p><strong>Phone:</strong> +91 6367812002</p>
         <p><strong>Location:</strong> India</p>
 
-        <div class="social-links">
+        <div class="social-links-box">
           <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/simran-kanwar22/" target="_blank">simran-kanwar22</a></p>
-          <p><strong>Gmail:</strong> <a href="mailto:rathoresimrann567@gmail.com" target="_blank">rathoresimran567@gmail.com</p>
           <p><strong>GitHub:</strong> <a href="https://github.com/Simran-Kanwar-15" target="_blank">Simran-Kanwar-15</a></p>
         </div>
       </div>
 
       <!-- Contact Form -->
-      <form class="contact-form" action="https://formspree.io/f/xnngolwd" method="POST">
+      <form class="contact-form glass-card" action="https://formspree.io/f/xnngolwd" method="POST" data-aos="fade-left" data-aos-delay="300">
+        <h3>Send a Message</h3>
         <input type="hidden" name="_subject" value="New Message from Portfolio Website">
         <input type="hidden" name="_next" value="thankyou.html">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+        
+        <div class="input-group">
+          <input type="text" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div class="input-group">
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
 
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
+    <p>© 2025 Simran Kanwar | All Rights Reserved</p>
+    <div class="socials">
+      <a href="https://linkedin.com/in/simran-kanwar22" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Simran-Kanwar-15" target="_blank">GitHub</a>
+      <a href="index.html">Portfolio</a>
+    </div>
   </footer>
 
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
 </body>
 </html>
